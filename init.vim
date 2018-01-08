@@ -31,7 +31,7 @@ set termguicolors
 
 set background=dark
 colorscheme stellarized_dark
-
+let g:airline_theme = "zenburn"
 
 " use uppercase write/quit
 cnoreabbrev W w
