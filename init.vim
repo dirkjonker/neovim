@@ -9,11 +9,11 @@ Plug 'cohama/lexima.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'nightsense/stellarized'
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'scrooloose/nerdtree'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -38,7 +38,8 @@ cnoreabbrev W w
 cnoreabbrev Q q
 
 " strip whitespace on save
-autocmd BufEnter *.{py,rs,c,h,json,scala,java,txt,md,css,html} EnableStripWhitespaceOnSave
+let g:ale_fix_on_save = 1
+let g:ale_pattern_options = {'\.\(json\|py\|sh\|vim\)$': {'ale_fixers': ['trim_whitespace', 'remove_trailing_lines']}}
 
 " mouse on iTerm
 set mouse=a
