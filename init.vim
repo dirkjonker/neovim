@@ -5,9 +5,10 @@
 call plug#begin()
 
 Plug 'airblade/vim-gitgutter'
+Plug 'ajmwagar/vim-deus'
 Plug 'cohama/lexima.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'flazz/vim-colorschemes'
+Plug 'icymind/NeoSolarized'
 Plug 'nightsense/stellarized'
 Plug 'scrooloose/nerdtree'
 Plug 'rust-lang/rust.vim'
@@ -30,8 +31,8 @@ let g:python3_host_prog = expand("~/.local/share/nvim/nvim-pyenv/bin/python")
 set termguicolors
 
 set background=dark
-colorscheme stellarized_dark
-let g:airline_theme = "zenburn"
+colorscheme NeoSolarized
+let g:airline_theme = "solarized"
 
 " use uppercase write/quit
 cnoreabbrev W w
@@ -39,7 +40,7 @@ cnoreabbrev Q q
 
 " strip whitespace on save
 let g:ale_fix_on_save = 1
-let g:ale_pattern_options = {'\.\(json\|py\|sh\|vim\)$': {'ale_fixers': ['trim_whitespace', 'remove_trailing_lines']}}
+let g:ale_pattern_options = {'\.\(json\|py\|sh\)$': {'ale_fixers': ['trim_whitespace', 'remove_trailing_lines']}}
 
 " mouse on iTerm
 set mouse=a
