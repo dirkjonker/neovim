@@ -44,7 +44,7 @@ call plug#end()
 set number
 
 " python virtualenv
-let g:python3_host_prog = expand("~/.local/share/nvim/nvim-pyenv/bin/python")
+let g:python3_host_prog = expand("~/.local/share/nvim/pyenv/bin/python")
 
 "##############
 " Colorscheme "
